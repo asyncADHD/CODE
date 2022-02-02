@@ -5,7 +5,7 @@ import time
 
 
 
-matrix_a = np.random.randint(1, 10, size=(2048, 2048))
+matrix_a = np.random.randint(1, 10, size=(50, 50))
 # matrix_b = np.random.rand(200,200)
 
 # create a function to multiply n dimensions matrix
