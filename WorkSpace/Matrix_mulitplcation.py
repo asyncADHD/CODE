@@ -1,7 +1,3 @@
-import time
-import numpy
-
-
 import numpy as np
 import random 
 import pandas as pd
@@ -10,7 +6,9 @@ import time
 
 # print( "%.16f" % float("1.953125e-02"))
 # DON'T TOUCH THIS CODE
-matrix = np.random.rand(1000, 1000)
+print ("\n")
+
+matrix = np.random.rand(950, 950)
 matrix_b = matrix
 
 
@@ -23,9 +21,6 @@ def matrix_multi(matrix, matrix_b, n):
     return matrix
 
 
-# Start the Timer for the multiplication
-multiplcation_start_time = datetime.now()
-time.sleep(1)
 # Rn the multiplication 10 times
 Muliplied_10_times = matrix_multi(matrix, matrix_b, 10)
 
@@ -45,7 +40,7 @@ Inversion_end_time = datetime.now()
 
 print ("Duration of inversion: {}".format(Inversion_end_time - Inersion_start_time))
 
-
+print ("\n")
 
 def Proof_of_inv(matrix, inverse):
     proof_of_inverse = np.dot(inverse, matrix)
