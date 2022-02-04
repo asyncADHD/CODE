@@ -1,18 +1,23 @@
 
 import numpy as np
-from datetime import datetime 
+import time
 
-print( "%.16f" % float("1.953125e-02"))
+print( "%.16f" % float("9.90625e-03"))
 
-x = 1
 
-matrix = np.random.rand(700, 700)
-matrix_b = matrix
 
-while x < 26:
-    time_s = datetime.now()
-    matrix_multi = np.dot(matrix, matrix_b)
-    time_e = datetime.now()
-    print (x)
-    print ("Duration of multiplcation: {}".format(time_e - time_s))
-    x += 1
+
+
+
+
+
+
+#     time_s = time
+#     matrix_multi = np.dot(matrix, matrix_b)
+#     time_e = time.time()
+#     print (x)
+#     time = time_e - time_s
+#     time_total = 0 
+#     time_total += time
+
+# print (time_total)

@@ -8,7 +8,7 @@ import time
 # DON'T TOUCH THIS CODE
 print ("\n")
 
-matrix = np.random.rand(950, 950)
+matrix = np.random.rand(100, 100)
 matrix_b = matrix
 
 
