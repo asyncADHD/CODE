@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 
 # print( "%.16f" % float("1.953125e-02"))
-# DON'T TOUCH THIS CODE
+
 print ("\n")
 
 matrix = np.random.rand(100, 100)
@@ -21,7 +21,7 @@ def matrix_multi(matrix, matrix_b, n):
     return matrix
 
 
-# Rn the multiplication 10 times
+# Run the multiplication 10 times
 Muliplied_10_times = matrix_multi(matrix, matrix_b, 10)
 
 # End the Timer for the multiplication

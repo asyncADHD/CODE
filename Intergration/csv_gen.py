@@ -1,7 +1,8 @@
 import pandas as pd
+import numpy as np
 
 
+data = np.random.rand(100, 100)
 
-data = [1,2,3,4,5,5,6,7,8,9,10]
-data1 = pd.DataFrame(data)
-write_csv = data1.to_csv('test.csv')
+write_to_excel = pd.DataFrame(data)
+write_to_excel.to_excel('intergration test.xlsx', sheet_name='Sheet1', index=False, header=False)
