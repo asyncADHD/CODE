@@ -5,7 +5,6 @@ import scipy.stats as stats
 from math import log, sqrt, pi, exp
 from scipy.stats import norm
 import pandas as pd
-from pandas import DataFrame
 from datetime import datetime, date
 import time 
 
@@ -15,8 +14,8 @@ T = 0.25 # time to maturity
 r = 0.02 # risk free risk in annual %
 q = 0.00 # annual dividend rate
 sigma = 0.25 # annual volatility in %
-steps = 10 # time steps
-N = 10000000 # number of trials*
+steps = 100 # time steps
+N = 100 # number of trials*
 
 
 S_T = datetime.now()
@@ -39,7 +38,7 @@ def geo_paths(S, T, r, q, sigma, steps, N):
     """
     dt = T/steps
     ST = np.log(S) +  np.cumsum(((r - q - sigma**2/2)*dt + sigma*np.sqrt(dt) * np.random.normal(size=(steps,N))),axis=0)
-    
+
     return np.exp(ST)
 
 
