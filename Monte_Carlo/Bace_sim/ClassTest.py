@@ -38,6 +38,19 @@ for i in range(0, n):
 for sim in simulations:
     plt.plot(np.arange(0, len(sim.prices)), sim.prices)
 
+
+# here
+def pos_p_c(simulations):
+    for sim in simulations:
+        for i in range (120, len(sim.prices)):
+            if sim.prices[i] > 140:
+                return i
+# here 
+
+
+ispos = pos_p_c(simulations)
+print(ispos)
+
 def price_over_time(simulations):
     prices = []
     for sim in simulations:
@@ -51,12 +64,13 @@ DateArr = price_over_time(simulations)
 
 
 
-print (DateArr[120:250])
 
+
+
+plt.show()
 
 # dateData = pd.DataFrame(price_over_time(simulations))
 # dateData.to_csv('price_over_time.csv')
 writer = pd.DataFrame(DateArr)
 # writer.to_csv('price_over_time.csv')
 
-plt.show()
