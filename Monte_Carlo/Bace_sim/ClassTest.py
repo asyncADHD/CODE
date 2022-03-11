@@ -1,3 +1,5 @@
+
+from unittest import result
 import matplotlib.pyplot as plt
 import numpy as np
 import math
@@ -25,12 +27,12 @@ class GBM:
         self.simulate()   # Simulate the diffusion proces
 
 simulations = []
-n = 100
+n = 5
 initial_price = 100
 drift = .02
 volatility = .25
 time_period = 1/365 # Daily
-total_time = 5
+total_time = 1
 
 for i in range(0, n):
     simulations.append(GBM(initial_price, drift, volatility, time_period, total_time))
@@ -39,17 +41,6 @@ for sim in simulations:
     plt.plot(np.arange(0, len(sim.prices)), sim.prices)
 
 
-# here
-def pos_p_c(simulations):
-    for sim in simulations:
-        for i in range (120, len(sim.prices)):
-            if sim.prices[i] > 140:
-                return i
-# here 
-
-
-ispos = pos_p_c(simulations)
-print(ispos)
 
 def price_over_time(simulations):
     prices = []
@@ -58,19 +49,25 @@ def price_over_time(simulations):
     return prices
 
 
+prices = price_over_time(simulations)
 
-DateArr = price_over_time(simulations)
+def val_return(prices):
+   result = []
+   for i in range (0, len(prices)):
+      for j in range (0, len(prices[i])):
+         if prices[i][j] >= 140:
+            result.append(j)
+            pass
+   return result
 
-
-
-
-
-
-
+val_return(prices)
+print (val_return(result))
 plt.show()
+
+
 
 # dateData = pd.DataFrame(price_over_time(simulations))
 # dateData.to_csv('price_over_time.csv')
-writer = pd.DataFrame(DateArr)
+writer = pd.DataFrame(sim.prices)
 # writer.to_csv('price_over_time.csv')
 
