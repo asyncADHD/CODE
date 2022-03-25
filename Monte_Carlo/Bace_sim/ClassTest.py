@@ -27,7 +27,7 @@ class GBM:
         self.simulate()   # Simulate the diffusion proces
 
 simulations = []
-n = 5
+n = 50000
 initial_price = 100
 drift = .02
 volatility = .25
@@ -51,23 +51,21 @@ def price_over_time(simulations):
 
 prices = price_over_time(simulations)
 
-def val_return(prices):
-   result = []
-   for i in range (0, len(prices)):
-      for j in range (0, len(prices[i])):
-         if prices[i][j] >= 140:
-            result.append(j)
-            pass
-   return result
 
-val_return(prices)
-print (val_return(result))
+# val_return(prices)
+# print (val_return(result))
+plt.show()
+
+av_stock_price = np.mean(prices, axis=0)
+# print(av_stock_price)
+
+plt.plot (np.arange(0, len(av_stock_price)), av_stock_price)
 plt.show()
 
 
 
-# dateData = pd.DataFrame(price_over_time(simulations))
-# dateData.to_csv('price_over_time.csv')
-writer = pd.DataFrame(sim.prices)
-# writer.to_csv('price_over_time.csv')
+# # dateData = pd.DataFrame(price_over_time(simulations))
+# # dateData.to_csv('price_over_time.csv')
+# writer = pd.DataFrame(sim.prices)
+# # writer.to_csv('price_over_time.csv')
 
