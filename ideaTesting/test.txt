@@ -1,0 +1,103 @@
+Start of loop
+count 0
+------------------------------
+for i in values: print i 1.1
+
+for i in values: print i 1.11
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+Start of loop
+
+count 1
+------------------------------
+for i in values: print i 1.1
+
+for i in values: print i 2.111
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.11
+
+for i in values: print i 3.1
+
+Start of loop
+
+count 2
+------------------------------
+for i in values: print i 1.1
+
+for i in values: print i 3.1111
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.111
+
+for i in values: print i 3.9
+
+Start of loop
+
+count 3
+------------------------------
+for i in values: print i 1.1
+
+for i in values: print i 2.11111
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1
+
+for i in values: print i 3.1111
+
+for i in values: print i 3.1
+
