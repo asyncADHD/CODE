@@ -1,4 +1,5 @@
 
+
 from unittest import result
 import matplotlib.pyplot as plt
 import numpy as np
@@ -52,20 +53,17 @@ def price_over_time(simulations):
 prices = price_over_time(simulations)
 
 
+
 # val_return(prices)
 # print (val_return(result))
-plt.show()
+# plt.show()
 
 av_stock_price = np.mean(prices, axis=0)
-# print(av_stock_price)
+
 
 plt.plot (np.arange(0, len(av_stock_price)), av_stock_price)
-plt.show()
+# plt.show()
 
-
-
-# # dateData = pd.DataFrame(price_over_time(simulations))
-# # dateData.to_csv('price_over_time.csv')
-# writer = pd.DataFrame(sim.prices)
-# # writer.to_csv('price_over_time.csv')
+write_csv = pd.DataFrame(av_stock_price)
+write_csv.to_csv('GBM_simulation.csv', header=False, index=False)
 
